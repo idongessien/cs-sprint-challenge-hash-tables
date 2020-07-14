@@ -4,8 +4,20 @@ def intersection(arrays):
     """
     # Your code here
 
-    return result
+    '''How otften does each number show up ?'''
+    num_instance = dict()
 
+    for array in arrays:
+
+        for num in array:
+
+            if num in num_instance:
+                num_instance[num] += 1
+            else:
+                num_instance[num] = 1
+    
+    '''Return numbers that show up for as many times as there are arrays'''
+    return [result[0] for result in num_instance.items() if result[1] == len(arrays)]
 
 if __name__ == "__main__":
     arrays = []
