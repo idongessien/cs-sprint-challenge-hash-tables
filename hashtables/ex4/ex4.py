@@ -4,7 +4,19 @@ def has_negatives(a):
     """
     # Your code here
 
-    return result
+    nums_with_opposite = dict()
+    corresponding_pair_absolutes = []
+
+    for num in a:
+
+        '''first add nums to dict . 0 has no opposite'''
+        nums_with_opposite[num] = 1
+
+        '''Add absolute value to new arr if opposite exists'''
+        if -num in nums_with_opposite and num != 0:
+            corresponding_pair_absolutes.append(abs(num))
+
+    return corresponding_pair_absolutes
 
 
 if __name__ == "__main__":

@@ -8,6 +8,8 @@ def finder(files, queries):
     """
     # Your code here
 
+Metally kicked out here maybe will revisit
+
     return result
 
 
